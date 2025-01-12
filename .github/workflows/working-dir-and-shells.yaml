@@ -6,9 +6,6 @@ defaults:
 jobs:
   display-wd-info:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: powershell
     steps:
       - name: Display working Direcotry & List Files
         run: |
@@ -22,6 +19,9 @@ jobs:
         run: pwd
   display-wd-info-windows:
     runs-on: windows-latest
+    defaults:
+      run:
+        shell: powershell
     steps:
       - name: Display working Direcotry & List Files
         run: |
